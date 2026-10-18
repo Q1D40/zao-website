@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="color-scheme" content="light">
-    <meta name="theme-color" content="#f3efe8">
+    <meta name="theme-color" content="#f4f0e7">
     <meta name="description" content="造">
     <title>造</title>
     <link rel="icon" type="image/png" href="./assets/zao-logo.png">
     <link rel="preload" as="image" href="./assets/zao-logo.png">
+    <link rel="preload" as="image" type="image/webp" href="./assets/material-light-desktop.webp" media="(min-width: 601px), (orientation: landscape)">
+    <link rel="preload" as="image" type="image/webp" href="./assets/material-light-mobile.webp" media="(max-width: 600px) and (orientation: portrait)">
     <link rel="stylesheet" href="./styles.css">
     <script src="./script.js" defer></script>
   </head>
   <body>
     <main class="scene">
       <div class="atmosphere" aria-hidden="true">
+        <picture class="surface">
+          <source media="(max-width: 600px) and (orientation: portrait)" srcset="./assets/material-light-mobile.webp" type="image/webp">
+          <img src="./assets/material-light-desktop.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async" draggable="false">
+        </picture>
         <div class="light"></div>
         <div class="warmth"></div>
-        <div class="contour contour--upper"></div>
-        <div class="contour contour--lower"></div>
         <div class="vignette"></div>
       </div>
       <figure class="emblem">

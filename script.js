@@ -12,14 +12,17 @@
   const paint = () => {
     scene.style.setProperty("--light-x", `${lightX.toFixed(2)}px`);
     scene.style.setProperty("--light-y", `${lightY.toFixed(2)}px`);
+    scene.style.setProperty("--surface-x", `${(lightX * 0.2).toFixed(2)}px`);
+    scene.style.setProperty("--surface-y", `${(lightY * 0.2).toFixed(2)}px`);
     frame = 0;
   };
 
   const reset = () => {
     if (frame) window.cancelAnimationFrame(frame);
     frame = 0;
-    scene.style.removeProperty("--light-x");
-    scene.style.removeProperty("--light-y");
+    for (const property of ["--light-x", "--light-y", "--surface-x", "--surface-y"]) {
+      scene.style.removeProperty(property);
+    }
   };
 
   const followLight = (event) => {
