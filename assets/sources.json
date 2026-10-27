@@ -1,0 +1,78 @@
+{
+  "brand_version": "1.1.0",
+  "source_repository": "../brand",
+  "refresh": "python3 scripts/sync-brand.py",
+  "files": {
+    "assets/brand/zao-lockup-primary.svg": {
+      "source": "logo/zao-lockup-primary.svg",
+      "source_sha256": "f046f642f8730811f37b48582976f1956d666b981720e754a9e1a767898119e2",
+      "sha256": "f046f642f8730811f37b48582976f1956d666b981720e754a9e1a767898119e2",
+      "bytes": 1449
+    },
+    "favicon.ico": {
+      "source": "icons/web/favicon.ico",
+      "source_sha256": "16d19504e519e3084aea29e00c6c69c57a3edd79aeb84644f61a44e03c5a726e",
+      "sha256": "16d19504e519e3084aea29e00c6c69c57a3edd79aeb84644f61a44e03c5a726e",
+      "bytes": 2457
+    },
+    "assets/brand/apple-touch-icon.png": {
+      "source": "icons/web/apple-touch-icon-180.png",
+      "source_sha256": "da1f054c67366d2f6f1c47d378051dd770612ab01c3983e0270a8291f1638d74",
+      "sha256": "da1f054c67366d2f6f1c47d378051dd770612ab01c3983e0270a8291f1638d74",
+      "bytes": 2498
+    },
+    "assets/images/zao-share.png": {
+      "source": "social/share/zao-opengraph-keyvisual-light.png",
+      "source_sha256": "9a3e245a055668e4f736cfc2372ee838337690ec4ff697bfaab991bbf2fdbeff",
+      "sha256": "9a3e245a055668e4f736cfc2372ee838337690ec4ff697bfaab991bbf2fdbeff",
+      "bytes": 769726
+    },
+    "assets/brand/favicon.svg": {
+      "source": "icons/web/favicon.svg",
+      "source_sha256": "10153868f3acd4a437147567b01747238d63754e9eaaa95e6250de79c11a061e",
+      "sha256": "048124efc686e50d71a68f427c6b2f2f088a0d8e9547a6be680b401c70dbd113",
+      "bytes": 991,
+      "adaptation": "Canonical geometry; vermilion in light mode, chalk in dark mode."
+    },
+    "assets/images/zao-keyvisual-wide.webp": {
+      "source": "visuals/zao-keyvisual-light-wide.png",
+      "source_sha256": "7341dd8174f340fe66fd37b065ddc56ee407f97beee47565d38493cfa4228964",
+      "sha256": "c4b1c4753f668398abd459c1e09278dc5089acac2e37c2202cd18cbf954048f1",
+      "bytes": 70670,
+      "adaptation": "WebP quality 88; original dimensions; metadata omitted."
+    },
+    "assets/images/zao-keyvisual-portrait.webp": {
+      "source": "visuals/zao-keyvisual-light-portrait.png",
+      "source_sha256": "fec656defd2e7f82c79125d32257907bf285f5c60295cc23a41b33256cdf761e",
+      "sha256": "8f8dfc53df051fbc58bdcfc25c33a6b4241c8fa611e5e4d502a763d361fb96fc",
+      "bytes": 53074,
+      "adaptation": "WebP quality 88; original dimensions; metadata omitted."
+    },
+    "assets/fonts/zao-sans-sc.woff2": {
+      "source": "fonts/noto-sans-sc/NotoSansSC-VF.ttf",
+      "source_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+      "sha256": "c81e29c2b5761f5c16ce7e459423f8271db7a66ae85cf4d9cb83f2e16cfc1fb5",
+      "bytes": 47648,
+      "adaptation": "Renamed WOFF2 subset; weights 400–600; source license and copyright retained."
+    },
+    "assets/fonts/noto-sans-sc-OFL.txt": {
+      "source": "fonts/noto-sans-sc/OFL.txt",
+      "source_sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "bytes": 4388
+    },
+    "assets/fonts/zao-inter.woff2": {
+      "source": "fonts/inter/Inter-VF.ttf",
+      "source_sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+      "sha256": "87b5c01a998feef4b8ff202979569118bead181e0012f234bfa1362ed63d8b0f",
+      "bytes": 32628,
+      "adaptation": "Renamed WOFF2 subset; weights 400–600; source license and copyright retained."
+    },
+    "assets/fonts/inter-OFL.txt": {
+      "source": "fonts/inter/OFL.txt",
+      "source_sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "bytes": 4377
+    }
+  }
+}
