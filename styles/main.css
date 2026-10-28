@@ -15,18 +15,19 @@
 :root {
   color-scheme: light;
   --chalk: #f6f3ed;
+  --scene-paper: #f5efe9;
   --ink: #24211f;
   --muted: #68605b;
   --link: #b53a27;
   --sans: "ZAO Web Inter", "ZAO Web Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-  background: var(--chalk);
+  background: var(--scene-paper);
   color: var(--ink);
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; min-width: 280px; }
-body { background: var(--chalk); }
+body { background: var(--scene-paper); }
 ::selection { color: var(--ink); background: #f0d2c8; }
 a { -webkit-tap-highlight-color: transparent; }
 a:focus-visible { outline: 2px solid var(--link); outline-offset: 6px; }
@@ -34,17 +35,31 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 6px; }
 .skip-link:focus { top: 16px; }
 .landing {
   --gutter: clamp(32px, 6.35vw, 128px);
+  --scene-image: url("../assets/images/zao-keyvisual-wide.webp");
+  --scene-width: min(94vw, 1680px);
+  --scene-position: right center;
   position: relative;
   isolation: isolate;
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 100%;
-  max-width: 1920px;
   min-height: max(100svh, 620px);
-  margin-inline: auto;
   padding: clamp(32px, 4.3vw, 72px) var(--gutter) 32px;
   overflow: clip;
-  background: var(--chalk);
+  background: var(--scene-paper);
+}
+/* Extend the scene's own light and color beneath its feathered background. */
+.landing::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background-image: var(--scene-image);
+  background-position: var(--scene-position);
+  background-size: var(--scene-width) auto;
+  background-repeat: no-repeat;
+  filter: blur(40px);
+  pointer-events: none;
 }
 .site-header, .hero, .site-footer { position: relative; z-index: 1; }
 .site-header { display: flex; align-items: center; }
@@ -58,32 +73,46 @@ h1 { margin: 0; font-size: clamp(52px, 4.8vw, 84px); font-weight: 600; line-heig
 .scene-art {
   position: absolute;
   top: 50%;
-  right: clamp(24px, 2.3vw, 64px);
+  right: 0;
   z-index: 0;
   display: block;
-  width: min(94vw, 1680px);
+  width: var(--scene-width);
   aspect-ratio: 1672 / 941;
   transform: translateY(-50%);
+  mask-image: linear-gradient(90deg, transparent, #000 20%);
   pointer-events: none;
   user-select: none;
-  mask-image: linear-gradient(90deg, transparent 0%, #000 20%, #000 98%, transparent);
 }
-.scene-art::after { position: absolute; inset: 0; content: ""; background: linear-gradient(180deg, var(--chalk), transparent 8%, transparent 93%, var(--chalk)); }
-.scene-art img { display: block; width: 100%; height: 100%; object-fit: contain; -webkit-user-drag: none; }
+.scene-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mask-image: linear-gradient(180deg, transparent, #000 7%, #000 89%, transparent);
+  -webkit-user-drag: none;
+}
 @media (min-width: 761px) and (max-width: 1100px) and (orientation: landscape) {
   .hero-copy { max-width: 290px; }
   h1 { font-size: 52px; }
   .positioning { font-size: 14px; }
 }
 @media (max-width: 980px) and (orientation: portrait) {
-  .landing { --gutter: 40px; min-height: max(100svh, 760px); padding-top: 36px; padding-bottom: 24px; }
+  .landing {
+    --gutter: 40px;
+    --scene-image: url("../assets/images/zao-keyvisual-portrait.webp");
+    --scene-width: min(100vw, 620px);
+    --scene-position: right bottom;
+    min-height: max(100svh, 760px);
+    padding-top: 36px;
+    padding-bottom: 24px;
+  }
   .brand { width: 156px; }
   .hero { align-items: flex-start; }
   .hero-copy { max-width: min(100%, 380px); padding: clamp(48px, 7svh, 80px) 0 0; }
   h1 { font-size: 56px; line-height: 1.3; letter-spacing: -1.4px; }
   .positioning { margin-top: 24px; font-size: 14px; }
-  .scene-art { top: auto; right: 0; bottom: 0; width: min(100vw, 620px); aspect-ratio: 941 / 1672; transform: none; mask-image: linear-gradient(90deg, transparent, #000 3%, #000 98%, transparent); }
-  .scene-art::after { background: linear-gradient(180deg, var(--chalk), transparent 15%, transparent 94%, var(--chalk)); }
+  .scene-art { top: auto; bottom: 0; aspect-ratio: 941 / 1672; transform: none; mask-image: linear-gradient(90deg, transparent, #000 4%); }
+  .scene-art img { mask-image: linear-gradient(180deg, transparent, #000 24%, #000 88%, transparent); }
 }
 @media (max-width: 600px) {
   .landing { --gutter: 24px; padding-top: max(28px, env(safe-area-inset-top)); padding-bottom: max(20px, env(safe-area-inset-bottom)); }
@@ -99,16 +128,15 @@ h1 { margin: 0; font-size: clamp(52px, 4.8vw, 84px); font-weight: 600; line-heig
   .positioning { max-width: 250px; }
 }
 @media (min-width: 600px) and (orientation: landscape) and (max-height: 560px) {
-  .landing { min-height: 100svh; padding-top: 24px; padding-bottom: 20px; }
+  .landing { --scene-width: min(88vw, calc(100svh * 1.95)); min-height: 100svh; padding-top: 24px; padding-bottom: 20px; }
   .brand { width: 132px; }
   .hero-copy { padding-block: 24px; }
   h1 { font-size: 42px; }
   .positioning { margin-top: 18px; font-size: 13px; }
-  .scene-art { width: min(88vw, calc(100svh * 1.95)); }
 }
 @media (forced-colors: active) {
   .landing { color: CanvasText; background: Canvas; }
-  .scene-art { display: none; }
+  .landing::before, .scene-art { display: none; }
   .positioning, .site-footer { color: CanvasText; }
   .brand img { forced-color-adjust: none; }
 }
