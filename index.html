@@ -1,53 +1,116 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#F5EFE9">
-  <meta name="color-scheme" content="light">
-  <meta name="description" content="造（ZAO），用于构建企业业务 Agent 服务的开源框架。">
-  <title>ZAO · 企业业务 Agent 框架</title>
-  <link rel="canonical" href="https://zao.tools/">
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="造 ZAO">
-  <meta property="og:title" content="ZAO · 企业业务 Agent 框架">
-  <meta property="og:description" content="用于构建企业业务 Agent 服务的开源框架。">
-  <meta property="og:url" content="https://zao.tools/">
-  <meta property="og:image" content="https://zao.tools/assets/images/zao-share.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="造 ZAO · 企业业务 Agent 框架">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ZAO · 企业业务 Agent 框架">
-  <meta name="twitter:description" content="用于构建企业业务 Agent 服务的开源框架。">
-  <meta name="twitter:image" content="https://zao.tools/assets/images/zao-share.png">
-  <link rel="preload" href="assets/fonts/zao-sans-sc.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/zao-inter.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/images/zao-keyvisual-wide.webp" as="image" type="image/webp" media="(min-width: 981px), (orientation: landscape)">
-  <link rel="preload" href="assets/images/zao-keyvisual-portrait.webp" as="image" type="image/webp" media="(max-width: 980px) and (orientation: portrait)">
-  <link rel="stylesheet" href="styles/main.css?v=2a346a6978aa">
-  <script src="scripts/main.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main-content">跳到主要内容</a>
-  <div class="landing">
-    <picture class="scene-art" aria-hidden="true" data-enter="art">
-      <source srcset="assets/images/zao-keyvisual-portrait.webp" media="(max-width: 980px) and (orientation: portrait)" type="image/webp" width="941" height="1672">
-      <img src="assets/images/zao-keyvisual-wide.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async" draggable="false">
-    </picture>
-    <header class="site-header" data-enter="identity">
-      <a class="brand" href="./" aria-label="ZAO 首页"><img src="assets/brand/zao-lockup-primary.svg" width="3257" height="1250" alt="造 ZAO" draggable="false"></a>
-    </header>
-    <main class="hero" id="main-content" tabindex="-1">
-      <div class="hero-copy" data-enter="copy">
-        <h1>把想法，<br>造进业务。</h1>
-        <p class="positioning">面向企业业务的开源 Agent 框架。</p>
-      </div>
-    </main>
-    <footer class="site-footer"><span>zao.tools</span></footer>
-  </div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#F5EFE9" />
+    <meta name="color-scheme" content="light" />
+    <meta
+      name="description"
+      content="造（ZAO）· 开源 Agent 开发引擎。打造你的 Agent。"
+    />
+    <title>造 ZAO · Agent 开发引擎</title>
+    <link rel="canonical" href="https://zao.tools/" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="造 ZAO" />
+    <meta property="og:title" content="造 ZAO · 打造你的 Agent。" />
+    <meta property="og:description" content="开源 Agent 开发引擎。" />
+    <meta property="og:url" content="https://zao.tools/" />
+    <meta
+      property="og:image"
+      content="https://zao.tools/assets/images/zao-share.png?v=8872c3574caa"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="造 ZAO · 开源 Agent 开发引擎 · 打造你的 Agent。"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="造 ZAO · 打造你的 Agent。" />
+    <meta name="twitter:description" content="开源 Agent 开发引擎。" />
+    <meta
+      name="twitter:image"
+      content="https://zao.tools/assets/images/zao-share.png?v=8872c3574caa"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/zao-sans-sc.woff2?v=947795b5862c"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/zao-inter.woff2?v=87b5c01a998f"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/images/zao-keyvisual-wide.webp"
+      as="image"
+      type="image/webp"
+      media="(min-width: 981px), (orientation: landscape)"
+    />
+    <link
+      rel="preload"
+      href="assets/images/zao-keyvisual-portrait.webp"
+      as="image"
+      type="image/webp"
+      media="(max-width: 980px) and (orientation: portrait)"
+    />
+    <link rel="stylesheet" href="styles/main.css?v=f894779b781a" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <div class="landing">
+      <picture class="scene-art" aria-hidden="true">
+        <source
+          srcset="assets/images/zao-keyvisual-portrait.webp"
+          media="(max-width: 980px) and (orientation: portrait)"
+          type="image/webp"
+          width="941"
+          height="1672"
+        />
+        <img
+          src="assets/images/zao-keyvisual-wide.webp"
+          alt=""
+          width="1672"
+          height="941"
+          fetchpriority="high"
+          decoding="async"
+          draggable="false"
+        />
+      </picture>
+      <header class="site-header">
+        <img
+          class="brand"
+          src="assets/brand/zao-lockup-primary.svg"
+          width="3257"
+          height="1250"
+          alt="造 ZAO"
+          draggable="false"
+        />
+      </header>
+      <main class="hero" id="main-content" tabindex="-1">
+        <div class="hero-copy">
+          <p class="positioning">开源 Agent 开发引擎</p>
+          <h1>
+            <span class="hero-lead">打造你的</span>
+            <span class="hero-agent"
+              >Agent<span class="hero-period">.</span></span
+            >
+          </h1>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>

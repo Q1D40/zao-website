@@ -6,8 +6,9 @@
     "assets/brand/zao-lockup-primary.svg": {
       "source": "logo/zao-lockup-primary.svg",
       "source_sha256": "f046f642f8730811f37b48582976f1956d666b981720e754a9e1a767898119e2",
-      "sha256": "f046f642f8730811f37b48582976f1956d666b981720e754a9e1a767898119e2",
-      "bytes": 1449
+      "sha256": "0ffd99a1ee43c58bcc192859649e0a46b1101c06ffd78478d9eccc83acc72b0b",
+      "bytes": 1406,
+      "adaptation": "Canonical geometry; product description updated for the website."
     },
     "favicon.ico": {
       "source": "icons/web/favicon.ico",
@@ -21,17 +22,11 @@
       "sha256": "da1f054c67366d2f6f1c47d378051dd770612ab01c3983e0270a8291f1638d74",
       "bytes": 2498
     },
-    "assets/images/zao-share.png": {
-      "source": "social/share/zao-opengraph-keyvisual-light.png",
-      "source_sha256": "9a3e245a055668e4f736cfc2372ee838337690ec4ff697bfaab991bbf2fdbeff",
-      "sha256": "9a3e245a055668e4f736cfc2372ee838337690ec4ff697bfaab991bbf2fdbeff",
-      "bytes": 769726
-    },
     "assets/brand/favicon.svg": {
       "source": "icons/web/favicon.svg",
       "source_sha256": "10153868f3acd4a437147567b01747238d63754e9eaaa95e6250de79c11a061e",
-      "sha256": "048124efc686e50d71a68f427c6b2f2f088a0d8e9547a6be680b401c70dbd113",
-      "bytes": 991,
+      "sha256": "bf42f859927a2c28fa3f8a4cd9561cfb60872ae565e50732bacda4c8f0ba1e4c",
+      "bytes": 984,
       "adaptation": "Canonical geometry; vermilion in light mode, chalk in dark mode."
     },
     "assets/images/zao-keyvisual-wide.webp": {
@@ -48,11 +43,27 @@
       "bytes": 53074,
       "adaptation": "WebP quality 88; original dimensions; metadata omitted."
     },
+    "assets/images/zao-share.svg": {
+      "source_repository": ".",
+      "source": "scripts/sync-brand.py",
+      "source_sha256": "5105d4352e275775c067db0978e1a45b5bc7e908ff271edbc8354bbac19bcc78",
+      "sha256": "6a97102d9ad96a1fd0e0e02d0caf2d5850b0071134e39a10d2007fd2cd154758",
+      "bytes": 110101,
+      "adaptation": "Site-specific composition from canonical brand geometry, outlined brand fonts and the approved key visual."
+    },
+    "assets/images/zao-share.png": {
+      "source_repository": ".",
+      "source": "assets/images/zao-share.svg",
+      "source_sha256": "6a97102d9ad96a1fd0e0e02d0caf2d5850b0071134e39a10d2007fd2cd154758",
+      "sha256": "8872c3574caa6980f6a1afaac33177b9937e7f5c9de423f7190acc61b61770ff",
+      "bytes": 363935,
+      "adaptation": "CairoSVG rendering, 1200 × 630 pixels."
+    },
     "assets/fonts/zao-sans-sc.woff2": {
       "source": "fonts/noto-sans-sc/NotoSansSC-VF.ttf",
       "source_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
-      "sha256": "c81e29c2b5761f5c16ce7e459423f8271db7a66ae85cf4d9cb83f2e16cfc1fb5",
-      "bytes": 47648,
+      "sha256": "947795b5862c6fb00cd8ac8b88777df2b3504ee1f08170a3240ae51bcd79dbbd",
+      "bytes": 46428,
       "adaptation": "Renamed WOFF2 subset; weights 400–600; source license and copyright retained."
     },
     "assets/fonts/noto-sans-sc-OFL.txt": {
